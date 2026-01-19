@@ -4,94 +4,106 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eric Onyame | PhD Candidate, UVA Data Science</title>
-  <meta name="description" content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Research in multilingual AI and medical reasoning." />
+  <meta name="description" content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Trustworthy AI, AI Safety, Multilingual AI, Multimodal AI." />
 
   <style>
     :root{
-      /* UVA-inspired, modern + clean */
-      --bg: #0B1220;          /* deep navy */
-      --bg2:#0F1B33;          /* slightly lighter */
-      --card:#0F1B33;
-      --text:#EAF0FF;
-      --muted:#B8C4E6;
-      --line: rgba(234,240,255,.14);
-      --accent:#E57200;      /* UVA orange */
-      --accent2:#4CC9F0;     /* subtle tech blue */
-      --white:#FFFFFF;
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --line:#e5e7eb;
+
+      /* Red accent like your sample */
+      --red:#7A0019;       /* deep red */
+      --red2:#A10022;      /* hover red */
+      --soft:#fafafa;
+      --card:#ffffff;
+      --shadow: 0 10px 30px rgba(17,24,39,.10);
     }
 
     *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); }
-
     a{ color: inherit; text-decoration:none; }
-    a:hover{ opacity:.9; }
+    a:hover{ opacity:.95; }
 
-    .wrap{ max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    .wrap{ max-width: 1060px; margin: 0 auto; padding: 0 20px; }
 
-    /* Top nav */
+    /* NAV */
     .nav{
-      position: sticky; top: 0;
-      background: rgba(11,18,32,.72);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
       z-index: 50;
+      background: var(--red);
+      border-bottom: 1px solid rgba(255,255,255,.18);
     }
     .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       padding: 14px 0;
       gap: 18px;
     }
     .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight: 700; letter-spacing: .2px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 4px rgba(229,114,0,.12);
+      color:#fff;
+      font-weight: 750;
+      letter-spacing:.2px;
+      font-size: 18px;
+      white-space: nowrap;
     }
     .menu{
-      display:flex; gap: 16px; flex-wrap: wrap; justify-content:flex-end;
-      font-size: 14px; color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
     }
-    .menu a{ padding: 6px 8px; border-radius: 10px; }
-    .menu a:hover{ background: rgba(234,240,255,.06); color: var(--text); }
+    .menu a{
+      color:#fff;
+      font-size: 14px;
+      font-weight: 650;
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.0);
+    }
+    .menu a:hover{
+      background: rgba(255,255,255,.12);
+      border-color: rgba(255,255,255,.18);
+    }
 
-    /* Hero section */
+    /* HERO */
     .hero{
-      background:
-        radial-gradient(900px 420px at 15% 20%, rgba(76,201,240,.18), transparent 60%),
-        radial-gradient(900px 420px at 85% 10%, rgba(229,114,0,.20), transparent 55%),
-        linear-gradient(180deg, var(--bg2), var(--bg));
+      background: var(--bg);
+      padding: 38px 0 26px;
       border-bottom: 1px solid var(--line);
-      padding: 46px 0 34px;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 28px;
+      grid-template-columns: 0.85fr 1.15fr; /* photo left, content right */
+      gap: 26px;
       align-items: center;
     }
 
     .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-size: 13px; color: var(--muted);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size: 13px;
+      color: var(--muted);
       border: 1px solid var(--line);
-      padding: 7px 10px;
+      padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(234,240,255,.04);
+      background: var(--soft);
     }
     .kicker span{
-      width:7px;height:7px;border-radius:999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(229,114,0,.12);
+      width: 8px; height: 8px; border-radius: 999px;
+      background: var(--red);
     }
 
     h1{
       margin: 14px 0 6px;
-      font-size: clamp(34px, 4vw, 46px);
-      line-height: 1.08;
-      letter-spacing: -0.6px;
+      font-size: clamp(32px, 3.6vw, 44px);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
     }
     .subtitle{
       margin: 0 0 14px;
@@ -99,68 +111,86 @@
       color: var(--muted);
       line-height: 1.55;
     }
-    .subtitle b{ color: var(--text); font-weight: 650; }
+    .subtitle b{ color: var(--text); font-weight: 750; }
 
     .bio{
-      margin: 0 0 18px;
-      color: var(--text);
-      opacity: .95;
-      line-height: 1.65;
+      margin: 0 0 16px;
       font-size: 15.5px;
-      max-width: 62ch;
+      line-height: 1.7;
+      color: var(--text);
+      max-width: 70ch;
     }
 
     .actions{
-      display:flex; gap: 12px; flex-wrap: wrap; align-items:center;
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items:center;
       margin-top: 10px;
     }
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding: 10px 14px;
       border-radius: 12px;
       border: 1px solid var(--line);
-      background: rgba(234,240,255,.04);
+      background: #fff;
       color: var(--text);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
+      box-shadow: 0 2px 0 rgba(17,24,39,.03);
     }
     .btn.primary{
-      border: none;
-      background: linear-gradient(135deg, var(--accent), #ff9a3d);
-      color: #1A120B;
-      box-shadow: 0 10px 24px rgba(229,114,0,.18);
+      border: 1px solid rgba(0,0,0,0);
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(122,0,25,.18);
     }
-    .btn:hover{ transform: translateY(-1px); transition: .15s ease; }
+    .btn.primary:hover{ background: var(--red2); }
 
-    /* Social icons */
+    /* SOCIAL ICONS */
     .social{
-      display:flex; gap: 10px; align-items:center;
-      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      margin-top: 14px;
     }
     .icon{
-      width: 40px; height: 40px;
-      display:inline-flex; align-items:center; justify-content:center;
+      width: 40px;
+      height: 40px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       border-radius: 12px;
       border: 1px solid var(--line);
-      background: rgba(234,240,255,.04);
+      background: #fff;
+      box-shadow: 0 2px 0 rgba(17,24,39,.03);
     }
-    .icon:hover{ background: rgba(234,240,255,.07); }
-    .icon svg{ width: 20px; height: 20px; fill: var(--text); }
+    .icon:hover{
+      border-color: rgba(122,0,25,.35);
+      box-shadow: 0 10px 22px rgba(122,0,25,.10);
+      transform: translateY(-1px);
+      transition: .15s ease;
+    }
+    .icon svg{ width: 20px; height: 20px; fill: var(--red); }
 
-    /* Photo card */
+    /* PHOTO CARD (LEFT) */
     .photo-card{
-      padding: 14px;
-      border-radius: 18px;
-      background: rgba(234,240,255,.04);
+      background: #fff;
       border: 1px solid var(--line);
-      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: var(--shadow);
     }
     .photo{
       width: 100%;
-      aspect-ratio: 4 / 4.3;
+      height: auto;
+      aspect-ratio: 4 / 4.4;    /* safer ratio so head stays visible */
       object-fit: cover;
+      object-position: center 12%; /* IMPORTANT: keeps head visible */
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.10);
+      border: 1px solid rgba(17,24,39,.08);
       display:block;
     }
     .photo-caption{
@@ -170,21 +200,25 @@
       line-height: 1.45;
     }
 
-    /* Section headers (stubs) */
-    main{ padding: 28px 0 80px; }
-    section{ padding: 26px 0; border-bottom: 1px solid var(--line); }
+    /* SECTIONS */
+    main{ padding: 26px 0 80px; }
+    section{
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 78px; /* prevents sticky nav hiding titles */
+    }
     section:last-child{ border-bottom:none; }
     h2{
       margin: 0 0 10px;
       font-size: 22px;
       letter-spacing: -0.2px;
     }
-    .section-note{ margin: 0; color: var(--muted); line-height:1.65; }
+    .section-note{ margin: 0; color: var(--muted); line-height:1.75; }
 
-    /* Responsive */
-    @media (max-width: 860px){
+    /* MOBILE */
+    @media (max-width: 900px){
       .hero-grid{ grid-template-columns: 1fr; }
-      .menu{ display:none; } /* keep it clean on mobile for now */
+      .menu{ gap: 6px; }
     }
   </style>
 </head>
@@ -194,11 +228,7 @@
   <div class="nav">
     <div class="wrap">
       <div class="nav-inner">
-        <div class="brand">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Eric Onyame</span>
-        </div>
-
+        <div class="brand">Eric Onyame</div>
         <div class="menu" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#news">News</a>
@@ -215,8 +245,21 @@
   <header class="hero">
     <div class="wrap">
       <div class="hero-grid">
+
+        <!-- PHOTO LEFT -->
+        <div class="photo-card">
+          <img class="photo" src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
+          <div class="photo-caption">
+            Charlottesville, VA · University of Virginia
+          </div>
+        </div>
+
+        <!-- TEXT RIGHT -->
         <div>
-          <div class="kicker"><span></span> Multilingual AI • Medical Reasoning • Trustworthy LLMs</div>
+          <div class="kicker">
+            <span></span>
+            Trustworthy AI · AI Safety · Multilingual AI · Multimodal AI
+          </div>
 
           <h1>Eric Onyame</h1>
 
@@ -224,15 +267,15 @@
             <b>PhD Candidate</b> · University of Virginia · <b>School of Data Science</b>
           </p>
 
-          <!-- Short bio: edit this paragraph anytime -->
+          <!-- Short bio (edit freely) -->
           <p class="bio">
-            I’m a PhD student in Data Science at the University of Virginia. My research focuses on multilingual
-            large language models for medical reasoning and reliable evaluation. I build datasets and training/evaluation
-            pipelines that improve reasoning quality across languages and support trustworthy deployment in high-stakes settings.
+            I’m a PhD student in Data Science at the University of Virginia. My work focuses on building and evaluating
+            reliable AI systems—especially for multilingual and high-stakes settings. I develop datasets, training methods,
+            and evaluation tools that improve robustness, reasoning quality, and trustworthiness across languages and modalities.
           </p>
 
           <div class="actions">
-            <!-- Update this CV link when you add your PDF, e.g., href="files/Eric_Onyame_CV.pdf" -->
+            <!-- Update once you upload CV: e.g., href="files/Eric_Onyame_CV.pdf" -->
             <a class="btn primary" href="#cv">View CV</a>
             <a class="btn" href="#publications">Selected Publications</a>
           </div>
@@ -245,7 +288,7 @@
               </svg>
             </a>
 
-            <!-- Google Scholar (simple academic-cap icon) -->
+            <!-- Google Scholar -->
             <a class="icon" href="https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3zm-6.5 9.5V14c0 2.76 2.91 5 6.5 5s6.5-2.24 6.5-5v-1.5L12 16 5.5 12.5z"/>
@@ -261,38 +304,31 @@
           </div>
         </div>
 
-        <!-- Photo -->
-        <div class="photo-card">
-          <img class="photo" src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
-          <div class="photo-caption">
-            PhD Candidate, University of Virginia School of Data Science
-          </div>
-        </div>
       </div>
     </div>
   </header>
 
-  <!-- SECTION HEADERS (stubs for now) -->
+  <!-- SECTIONS (kept as-is, clear + spaced) -->
   <main>
     <div class="wrap">
       <section id="about">
         <h2>About</h2>
-        <p class="section-note">Replace this with a fuller bio (2–6 sentences) and your research interests.</p>
+        <p class="section-note">Add a fuller bio (2–6 sentences), research interests, and your current focus.</p>
       </section>
 
       <section id="news">
         <h2>News</h2>
-        <p class="section-note">Add dated updates (paper submissions, talks, releases, awards).</p>
+        <p class="section-note">Add dated updates: submissions, acceptances, talks, releases, awards.</p>
       </section>
 
       <section id="research">
         <h2>Research</h2>
-        <p class="section-note">List 2–4 research themes and link to key projects (e.g., CURE-Med).</p>
+        <p class="section-note">List 2–4 themes and link to your key projects (e.g., CURE-Med).</p>
       </section>
 
       <section id="publications">
         <h2>Publications</h2>
-        <p class="section-note">Add selected publications with links: Paper · Code · Dataset · Website · BibTeX.</p>
+        <p class="section-note">Add publications with links: Paper · Code · Dataset · Website · BibTeX.</p>
       </section>
 
       <section id="teaching">
