@@ -1,11 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Eric Nartey - AI Researcher</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric Onyame | PhD Candidate, UVA Data Science</title>
+  <meta name="description" content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Research in multilingual AI and medical reasoning." />
+
+  <style>
+    :root{
+      /* UVA-inspired, modern + clean */
+      --bg: #0B1220;          /* deep navy */
+      --bg2:#0F1B33;          /* slightly lighter */
+      --card:#0F1B33;
+      --text:#EAF0FF;
+      --muted:#B8C4E6;
+      --line: rgba(234,240,255,.14);
+      --accent:#E57200;      /* UVA orange */
+      --accent2:#4CC9F0;     /* subtle tech blue */
+      --white:#FFFFFF;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); }
+
+    a{ color: inherit; text-decoration:none; }
+    a:hover{ opacity:.9; }
+
+    .wrap{ max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Top nav */
+    .nav{
+      position: sticky; top: 0;
+      background: rgba(11,18,32,.72);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      z-index: 50;
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 0;
+      gap: 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 700; letter-spacing: .2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(229,114,0,.12);
+    }
+    .menu{
+      display:flex; gap: 16px; flex-wrap: wrap; justify-content:flex-end;
+      font-size: 14px; color: var(--muted);
+    }
+    .menu a{ padding: 6px 8px; border-radius: 10px; }
+    .menu a:hover{ background: rgba(234,240,255,.06); color: var(--text); }
+
+    /* Hero section */
+    .hero{
+      background:
+        radial-gradient(900px 420px at 15% 20%, rgba(76,201,240,.18), transparent 60%),
+        radial-gradient(900px 420px at 85% 10%, rgba(229,114,0,.20), transparent 55%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      border-bottom: 1px solid var(--line);
+      padding: 46px 0 34px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size: 13px; color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(234,240,255,.04);
+    }
+    .kicker span{
+      width:7px;height:7px;border-radius:999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(229,114,0,.12);
+    }
+
+    h1{
+      margin: 14px 0 6px;
+      font-size: clamp(34px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -0.6px;
+    }
+    .subtitle{
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .subtitle b{ color: var(--text); font-weight: 650; }
+
+    .bio{
+      margin: 0 0 18px;
+      color: var(--text);
+      opacity: .95;
+      line-height: 1.65;
+      font-size: 15.5px;
+      max-width: 62ch;
+    }
+
+    .actions{
+      display:flex; gap: 12px; flex-wrap: wrap; align-items:center;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(234,240,255,.04);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), #ff9a3d);
+      color: #1A120B;
+      box-shadow: 0 10px 24px rgba(229,114,0,.18);
+    }
+    .btn:hover{ transform: translateY(-1px); transition: .15s ease; }
+
+    /* Social icons */
+    .social{
+      display:flex; gap: 10px; align-items:center;
+      margin-top: 12px;
+    }
+    .icon{
+      width: 40px; height: 40px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(234,240,255,.04);
+    }
+    .icon:hover{ background: rgba(234,240,255,.07); }
+    .icon svg{ width: 20px; height: 20px; fill: var(--text); }
+
+    /* Photo card */
+    .photo-card{
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(234,240,255,.04);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 60px rgba(0,0,0,.35);
+    }
+    .photo{
+      width: 100%;
+      aspect-ratio: 4 / 4.3;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      display:block;
+    }
+    .photo-caption{
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* Section headers (stubs) */
+    main{ padding: 28px 0 80px; }
+    section{ padding: 26px 0; border-bottom: 1px solid var(--line); }
+    section:last-child{ border-bottom:none; }
+    h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+    }
+    .section-note{ margin: 0; color: var(--muted); line-height:1.65; }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .menu{ display:none; } /* keep it clean on mobile for now */
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Welcome to Eric Nartey's Site</h1>
-    <p>I'm involved in AI research on multilingual medical models like CURE-Med. Check out my work on training setups, prompts, and hyperparameters for reproducible results.</p>
-    <a href="https://github.com/Eric-Onyame">My GitHub</a>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap">
+      <div class="nav-inner">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Eric Onyame</span>
+        </div>
+
+        <div class="menu" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#cv">CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker"><span></span> Multilingual AI • Medical Reasoning • Trustworthy LLMs</div>
+
+          <h1>Eric Onyame</h1>
+
+          <p class="subtitle">
+            <b>PhD Candidate</b> · University of Virginia · <b>School of Data Science</b>
+          </p>
+
+          <!-- Short bio: edit this paragraph anytime -->
+          <p class="bio">
+            I’m a PhD student in Data Science at the University of Virginia. My research focuses on multilingual
+            large language models for medical reasoning and reliable evaluation. I build datasets and training/evaluation
+            pipelines that improve reasoning quality across languages and support trustworthy deployment in high-stakes settings.
+          </p>
+
+          <div class="actions">
+            <!-- Update this CV link when you add your PDF, e.g., href="files/Eric_Onyame_CV.pdf" -->
+            <a class="btn primary" href="#cv">View CV</a>
+            <a class="btn" href="#publications">Selected Publications</a>
+          </div>
+
+          <div class="social" aria-label="Social links">
+            <!-- GitHub -->
+            <a class="icon" href="https://github.com/Eric-Onyame" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5C5.73.5.75 5.64.75 12.02c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.26.79-.57v-2.1c-3.2.71-3.88-1.58-3.88-1.58-.53-1.37-1.29-1.73-1.29-1.73-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.28.73-1.58-2.55-.3-5.23-1.3-5.23-5.8 0-1.28.45-2.33 1.19-3.15-.12-.3-.52-1.5.11-3.14 0 0 .98-.32 3.2 1.2a10.7 10.7 0 0 1 2.92-.4c.99 0 1.99.14 2.92.4 2.22-1.52 3.2-1.2 3.2-1.2.63 1.64.24 2.84.12 3.14.74.82 1.19 1.87 1.19 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.78 1.08.78 2.18v3.23c0 .31.2.68.8.57 4.56-1.53 7.84-5.86 7.84-10.96C23.25 5.64 18.27.5 12 .5z"/>
+              </svg>
+            </a>
+
+            <!-- Google Scholar (simple academic-cap icon) -->
+            <a class="icon" href="https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3zm-6.5 9.5V14c0 2.76 2.91 5 6.5 5s6.5-2.24 6.5-5v-1.5L12 16 5.5 12.5z"/>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a class="icon" href="https://www.linkedin.com/in/eric-onyame-2249371b4/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.66 4.78 6.11v9.35h-4v-8.29c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.15-3.18 4.37v8.44h-4V7.98z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Photo -->
+        <div class="photo-card">
+          <img class="photo" src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
+          <div class="photo-caption">
+            PhD Candidate, University of Virginia School of Data Science
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION HEADERS (stubs for now) -->
+  <main>
+    <div class="wrap">
+      <section id="about">
+        <h2>About</h2>
+        <p class="section-note">Replace this with a fuller bio (2–6 sentences) and your research interests.</p>
+      </section>
+
+      <section id="news">
+        <h2>News</h2>
+        <p class="section-note">Add dated updates (paper submissions, talks, releases, awards).</p>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+        <p class="section-note">List 2–4 research themes and link to key projects (e.g., CURE-Med).</p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <p class="section-note">Add selected publications with links: Paper · Code · Dataset · Website · BibTeX.</p>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <p class="section-note">Add TA/instructor roles, courses, and mentoring.</p>
+      </section>
+
+      <section id="cv">
+        <h2>CV</h2>
+        <p class="section-note">Upload your CV PDF and link it from the “View CV” button above.</p>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
