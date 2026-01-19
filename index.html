@@ -232,6 +232,50 @@
       border-bottom-color: rgba(122,0,25,.65);
     }
 
+   .teaching-list{
+     list-style: none;
+     padding: 0;
+     margin: 16px 0 0;
+     display: grid;
+     gap: 12px;
+   }
+   
+   .teaching-list li{
+     border: 1px solid var(--line);
+     border-radius: 14px;
+     padding: 12px 14px;
+     background: #fff;
+     box-shadow: 0 2px 0 rgba(17,24,39,.03);
+   }
+   
+   .teaching-list .term{
+     display: inline-block;
+     font-weight: 800;
+     color: var(--red);
+     margin-right: 10px;
+   }
+   
+   .teaching-list .role{
+     display: inline-block;
+     font-weight: 750;
+     color: var(--text);
+     margin-right: 10px;
+   }
+   
+   .teaching-list .course{
+     display: inline-block;
+     color: var(--text);
+     font-weight: 650;
+   }
+   
+   .teaching-list .details{
+     display: block;
+     margin-top: 6px;
+     color: var(--muted);
+     line-height: 1.6;
+   }
+
+
   </style>
 </head>
 
@@ -355,9 +399,56 @@
       </section>
 
       <section id="teaching">
-        <h2>Teaching</h2>
-        <p class="section-note">I will add TA/instructor roles, courses, and mentoring here.</p>
-      </section>
+  <h2>Teaching</h2>
+
+  <p class="section-note">
+    Teaching Assistant: I have supported instruction in core Data Science and AI courses.
+  </p>
+
+  <ul class="teaching-list">
+    <li>
+      <span class="term">Spring 2026</span>
+      <span class="role">Teaching Assistant</span>
+      <span class="course">DS 6050: Deep Learning</span>
+      <span class="details">
+       Supported course instruction through office hours, assignment support, and student guidance on core deep learning topics,
+       including optimization, regularization, and neural network architectures.
+     </span>
+    </li>
+
+    <li>
+      <span class="term">Spring 2025</span>
+      <span class="role">Teaching Assistant</span>
+      <span class="course">DS 6051: Decoding Large Language Models</span>
+      <span class="details">
+       Assisted instruction on modern language models and applied workflows, providing support on course projects, readings,
+       and practical implementation of evaluation and prompting methods.
+     </span>
+    </li>
+
+    <li>
+      <span class="term">Fall 2024</span>
+      <span class="role">Teaching Assistant</span>
+      <span class="course">DS 6600: Data Engineering I: Data Management & Visualization</span>
+      <span class="details">Facilitated practical sessions on large-scale data infrastructure.</span>
+    </li>
+
+    <li>
+      <span class="term">Fall 2024</span>
+      <span class="role">Teaching Assistant</span>
+      <span class="course">DS 1001: Foundation of Data Science</span>
+      <span class="details">Supported instruction and student understanding of core data science concepts.</span>
+    </li>
+
+    <li>
+      <span class="term">Aug 2021 – Jun 2022</span>
+      <span class="role">Graduate Teaching Assistant</span>
+      <span class="course">Elementary Statistical Analysis; College Algebra (UTC)</span>
+      <span class="details">Delivered lectures, provided assessment feedback, and supported student engagement.</span>
+    </li>
+  </ul>
+</section>
+
 
       <section id="cv">
         <h2>CV</h2>
