@@ -313,6 +313,45 @@
   margin-right: 10px;
 }
 
+   .pub-subhead{
+  margin: 18px 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.pub-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.pub-item{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(17,24,39,.03);
+  line-height: 1.65;
+}
+
+.pub-title{
+  font-weight: 800;
+  color: var(--text);
+}
+
+.pub-authors{
+  color: var(--muted);
+}
+
+.pub-status{
+  color: var(--red);
+  font-weight: 750;
+}
+
+
 
 
 
@@ -470,9 +509,31 @@
 
 
       <section id="publications">
-        <h2>Publications</h2>
-        <p class="section-note">Publications and link to my google scholar here</p>
-      </section>
+  <h2>Publications</h2>
+  <p class="section-note">More updates will be added soon.</p>
+
+  <h3 class="pub-subhead">Ongoing Projects and Preprints</h3>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <span class="pub-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</span><br>
+      <span class="pub-authors">Eric Onyame, Akash Ghosh, Subhadip Baidya, Sriparna Saha, Xiuying Chen.</span><br>
+      <span class="pub-status">(Under review)</span>
+    </li>
+
+    <li class="pub-item">
+      <span class="pub-title">The Robustness of Existing AI Monitors</span><br>
+      <span class="pub-authors">Eric Onyame, Chirag Agarwal.</span><br>
+      <span class="pub-status">(In progress)</span>
+    </li>
+
+    <li class="pub-item">
+      <span class="pub-title">Counterfactual LLM Verifiers for Math and Logic Reasoning Tasks</span><br>
+      <span class="pub-authors">Elita Lobo, Eric Onyame, Yair Zick, Chirag Agarwal.</span><br>
+      <span class="pub-status">(In progress)</span>
+    </li>
+  </ul>
+</section>
+
 
       <section id="teaching">
   <h2>Teaching</h2>
