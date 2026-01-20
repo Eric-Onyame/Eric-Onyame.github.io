@@ -288,6 +288,32 @@
   color: var(--red);
 }
 
+   .news-list{
+  margin: 14px 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.news-list li{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 14px;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(17,24,39,.03);
+  line-height: 1.7;
+}
+
+.news-date{
+  display: inline-block;
+  min-width: 74px;
+  font-weight: 800;
+  color: var(--red);
+  margin-right: 10px;
+}
+
+
 
 
   </style>
@@ -396,19 +422,32 @@
       </section> -->
 
       <section id="news">
-        <h2>News</h2>
-        <ul class="news-list">
-          <li><span class="news-date">Jan 2026</span> <span class="tag">Paper</span> Under review</li>
-          <li><span class="news-date">Dec 2025</span> <span class="tag">Talk</span> Presentation details to be updated.</li>
-        </ul>
-    </section>
+  <h2>News</h2>
+  <ul class="news-list">
+    <li>
+      <span class="news-date">Jan 2026</span>
+      Detailed update on my paper submission will be posted soon.
+    </li>
+
+    <li>
+      <span class="news-date">Mar 2025</span>
+      Gave a talk on the applications of large language models at the UVA School of Data Science.
+    </li>
+
+    <li>
+      <span class="news-date">Mar 2023</span>
+      Received the 2023 Outstanding Master’s Student in Mathematics award at the University of Tennessee at Chattanooga.
+    </li>
+  </ul>
+</section>
+
 
 
       <section id="research">
   <h2>Research</h2>
 
   <p class="section-note">
-    I am broadly interested in Trustworthy AI. I am motivated by a simple question: how can we design AI systems whose outputs are reliable, faithful to evidence, and worthy of user trust?
+    I am broadly interested in Trustworthy AI. I am curious and motivated by a simple question: how can we design AI systems whose outputs are reliable, faithful to evidence, and worthy of user trust?
   </p>
 
   <p class="section-note">
@@ -420,7 +459,7 @@
       <b>Multilingual AI:</b> How can we build representations and evaluation pipelines that generalize across languages and produce consistent, high-quality responses in the user’s language?
     </li>
     <li>
-      <b>AI Safety:</b> How can we monitor and mitigate unsafe or misleading behavior? I study this through interpretability and safety-focused evaluation tools.
+      <b>AI Safety:</b> How can we monitor and mitigate unsafe or misleading behavior? My goal is to study this through interpretability and safety-focused evaluation tools.
     </li>
     <li>
       <b>Multimodal AI:</b> How can we extend these questions beyond text to models that reason over multiple modalities while remaining robust to distribution shifts and out-of-domain inputs?
