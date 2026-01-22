@@ -405,6 +405,34 @@
 }
 
 
+   .skills-list{
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.skills-list li{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(17,24,39,.03);
+  line-height: 1.7;
+}
+
+.skill-label{
+  font-weight: 850;
+  color: var(--red);
+  margin-right: 8px;
+}
+
+.skill-items{
+  color: var(--text);
+}
+
+
 
 
 
@@ -667,11 +695,28 @@
 </ul>
 
 
+       <section id="skills">
+  <h2>Skills</h2>
+
+  <ul class="skills-list">
+    <li>
+      <span class="skill-label">Languages:</span>
+      <span class="skill-items">Python, R, Julia, SQL.</span>
+    </li>
+    <li>
+      <span class="skill-label">Tools and Libraries:</span>
+      <span class="skill-items">PyTorch, PySpark, Docker, Git, NumPy, Pandas, Matplotlib, scikit-learn, LaTeX, Cloud computing.</span>
+    </li>
+  </ul>
+</section>
+
+
+
 
          <section id="cv">
         <h2>CV</h2>
-        <p class="section-note">Yet to upload my CV and link it from the “View CV” button above.</p>
-      </section>
+         <p class="section-note">Yet to upload my CV and link it from the “View CV” button above.</p>
+        </section>
 
     </div>
   </main>
