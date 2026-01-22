@@ -356,6 +356,55 @@
   border-bottom: 2px solid rgba(122,0,25,.35);
 }
 
+   .site-footer{
+  margin-top: 40px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+.footer-email{
+  text-align: center;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.footer-email a{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(122,0,25,.25);
+  padding-bottom: 2px;
+}
+
+.footer-email a:hover{
+  border-bottom-color: rgba(122,0,25,.65);
+  color: var(--red);
+}
+
+.footer-quote{
+  max-width: 78ch;
+  margin: 0 auto 14px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14.5px;
+}
+
+.footer-author{
+  display: block;
+  margin-top: 6px;
+  color: var(--text);
+  font-weight: 750;
+}
+
+.footer-meta{
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
 
 
 
@@ -619,11 +668,38 @@
 
 
 
-      <section id="cv">
+         <section id="cv">
         <h2>CV</h2>
         <p class="section-note">Yet to upload my CV and link it from the “View CV” button above.</p>
       </section>
+
     </div>
   </main>
+
+  <!-- Footer goes here, right after </main> -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-email">
+        <a href="mailto:reh6ed@virginia.edu">reh6ed@virginia.edu</a>
+      </div>
+
+      <p class="footer-quote">
+        “The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night.”
+        <span class="footer-author">— Henry Wadsworth Longfellow</span>
+      </p>
+
+      <div class="footer-meta">
+        © <span id="year"></span> Eric Onyame. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
+
+
