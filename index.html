@@ -433,6 +433,19 @@
 }
 
 
+   .cv-link{
+  color: var(--red);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(122,0,25,.25);
+  padding-bottom: 2px;
+}
+.cv-link:hover{
+  border-bottom-color: rgba(122,0,25,.65);
+}
+
+
+
 
 
 
@@ -502,7 +515,7 @@
 
           <div class="actions">
             <!-- Update once you upload CV: e.g., href="files/Eric_Onyame_CV.pdf" -->
-            <a class="btn primary" href="#cv">View CV</a>
+            <a class="btn primary" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
             <a class="btn" href="#publications">Selected Publications</a>
           </div>
 
@@ -696,29 +709,31 @@
 
 
        <section id="skills">
-  <h2>Skills</h2>
+         <h2>Skills</h2>
+       
+         <ul class="skills-list">
+           <li>
+             <span class="skill-label">Languages:</span>
+             <span class="skill-items">Python, R, Julia, SQL.</span>
+           </li>
+           <li>
+             <span class="skill-label">Tools and Libraries:</span>
+             <span class="skill-items">PyTorch, PySpark, Docker, Git, NumPy, Pandas, Matplotlib, scikit-learn, LaTeX, Cloud computing.</span>
+           </li>
+         </ul>
+       </section>
 
-  <ul class="skills-list">
-    <li>
-      <span class="skill-label">Languages:</span>
-      <span class="skill-items">Python, R, Julia, SQL.</span>
-    </li>
-    <li>
-      <span class="skill-label">Tools and Libraries:</span>
-      <span class="skill-items">PyTorch, PySpark, Docker, Git, NumPy, Pandas, Matplotlib, scikit-learn, LaTeX, Cloud computing.</span>
-    </li>
-  </ul>
+
+
+<section id="cv">
+  <h2>CV</h2>
+  <p class="section-note">
+    <a class="cv-link" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">
+      Download / View my CV (PDF)
+    </a>
+  </p>
 </section>
 
-
-
-
-         <section id="cv">
-        <h2>CV</h2>
-         <p class="section-note">Yet to upload my CV and link it from the “View CV” button above.</p>
-        </section>
-
-    </div>
   </main>
 
   <!-- Footer goes here, right after </main> -->
