@@ -444,12 +444,26 @@
   border-bottom-color: rgba(122,0,25,.65);
 }
 
-   #cv{
-  padding: 14px 0 8px;
+ /* Reduce extra whitespace before the footer */
+main{
+  padding-bottom: 24px;   /* was likely 80px */
 }
+
+section{
+  padding: 18px 0;        /* was likely 26px */
+}
+
+/* Make the CV section tighter specifically */
+#cv{
+  padding-bottom: 10px;
+}
+
+/* Reduce top margin of footer so it sits closer */
 .site-footer{
-  margin-top: 14px;
+  margin-top: 16px;       /* was likely 40px */
+  padding: 22px 0;        /* was likely 32px */
 }
+
 
 
 
