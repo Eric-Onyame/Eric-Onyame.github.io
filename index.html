@@ -464,6 +464,43 @@ section{
   padding: 22px 0;        /* was likely 32px */
 }
 
+   .edu-list{
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.edu-list li{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff;
+  box-shadow: 0 2px 0 rgba(17,24,39,.03);
+  line-height: 1.7;
+}
+
+.edu-school{
+  display: block;
+  font-weight: 850;
+  color: var(--text);
+}
+
+.edu-meta{
+  display: block;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.edu-detail{
+  display: block;
+  color: var(--red);
+  font-weight: 750;
+  margin-top: 6px;
+}
+
+
 
 
 
@@ -482,7 +519,7 @@ section{
       <div class="nav-inner">
         <div class="brand">Eric Onyame</div>
         <div class="menu" aria-label="Primary navigation">
-          <!-- <a href="#about">About</a> -->
+          <a href="#education">Education</a>
           <a href="#news">News</a>
           <a href="#research">Research</a>
           <a href="#publications">Publications</a>
@@ -572,10 +609,30 @@ section{
   <!-- SECTIONS (kept as-is, clear + spaced) -->
   <main>
     <div class="wrap">
-      <!-- <section id="about">
-        <h2>About</h2>
-        <p class="section-note">I will add my bio, research interests, and my current focus here.</p>
-      </section> -->
+      <section id="education">
+  <h2>Education</h2>
+
+  <ul class="edu-list">
+    <li>
+      <span class="edu-school">University of Virginia</span>
+      <span class="edu-meta">PhD in Data Science · Aug 2023 – Present</span>
+      <span class="edu-detail">Advisor: Professor Chirag Agarwal</span>
+    </li>
+
+    <li>
+      <span class="edu-school">The University of Tennessee at Chattanooga</span>
+      <span class="edu-meta">MS in Mathematics · Aug 2021 – May 2023</span>
+      <span class="edu-detail">Advisor: Dr. Lakmali Weeraseena</span>
+    </li>
+
+    <li>
+      <span class="edu-school">University of Cape Coast, Ghana</span>
+      <span class="edu-meta">BSc in Mathematics with Economics · Aug 2016 – Jul 2020</span>
+      <span class="edu-detail">First Class Honors</span>
+    </li>
+  </ul>
+</section>
+
 
       <section id="news">
   <h2>News</h2>
