@@ -4,6 +4,1053 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eric Onyame | PhD Candidate, UVA Data Science</title>
+  <meta name="description" content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Trustworthy AI, AI Safety, Multilingual AI, and Multimodal AI." />
+  <link rel="canonical" href="https://eric-onyame.github.io/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;0,8..60,900;1,8..60,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Eric Onyame",
+    "url": "https://eric-onyame.github.io/",
+    "image": "https://eric-onyame.github.io/Figures/Eric_Onyame.png",
+    "jobTitle": "PhD Candidate",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of Virginia School of Data Science"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/eric-onyame-2249371b4/",
+      "https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en",
+      "https://github.com/Eric-Onyame",
+      "https://datascience.virginia.edu/people/eric-onyame"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --maroon: #7A0019;
+      --maroon-dark: #5C0013;
+      --maroon-light: #9A1035;
+      --maroon-bg: #fdf6f7;
+      --cream: #FDFAF6;
+      --bg: #f8f7f5;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --light-muted: #8a8a8a;
+      --line: #e8e4df;
+      --line-light: #f0ece7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 20px rgba(0,0,0,.07);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,.09);
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body { min-height: 100vh; }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: 100vh;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      background: var(--card);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      padding: 32px 24px 24px;
+    }
+
+    .photo-frame {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+      border: 4px solid var(--maroon);
+      box-shadow: 0 0 0 6px rgba(122,0,25,.08), var(--shadow-md);
+      flex-shrink: 0;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 6%;
+    }
+
+    .sidebar-name {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2;
+      letter-spacing: -.3px;
+    }
+
+    .sidebar-title {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .sidebar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--maroon);
+      background: var(--maroon-bg);
+      padding: 4px 10px;
+      border-radius: 99px;
+      letter-spacing: .2px;
+    }
+
+    .sidebar-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .s-icon {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      transition: all .15s ease;
+    }
+
+    .s-icon:hover {
+      border-color: var(--maroon);
+      background: var(--maroon-bg);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .s-icon svg {
+      width: 17px;
+      height: 17px;
+      fill: var(--maroon);
+    }
+
+    .sidebar-email {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .sidebar-email a {
+      color: var(--maroon);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(122,0,25,.2);
+    }
+
+    .sidebar-email a:hover {
+      border-bottom-color: var(--maroon);
+    }
+
+    /* NAV */
+    .sidebar-nav {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all .12s ease;
+      cursor: pointer;
+    }
+
+    .sidebar-nav a:hover {
+      background: var(--maroon-bg);
+      color: var(--maroon);
+    }
+
+    .sidebar-nav a.active {
+      background: var(--maroon);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .sidebar-nav a .nav-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      opacity: .7;
+    }
+
+    .sidebar-nav a.active .nav-icon {
+      opacity: 1;
+    }
+
+    .sidebar-cv {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .cv-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 16px;
+      border-radius: 10px;
+      background: var(--maroon);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background .15s ease;
+      box-shadow: 0 4px 14px rgba(122,0,25,.2);
+    }
+
+    .cv-btn:hover { background: var(--maroon-dark); }
+
+    .cv-btn svg { width: 16px; height: 16px; fill: #fff; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      padding: 36px 44px 60px;
+      overflow-y: auto;
+    }
+
+    /* PAGES */
+    .page { display: none; animation: fadeIn .25s ease; }
+    .page.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION TITLES */
+    .page-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -.4px;
+      margin-bottom: 6px;
+    }
+
+    .page-subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 65ch;
+    }
+
+    /* ── ABOUT PAGE ── */
+    .about-bio {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 68ch;
+    }
+
+    .about-bio a {
+      color: var(--maroon);
+      font-weight: 700;
+      border-bottom: 1.5px solid rgba(122,0,25,.25);
+    }
+
+    .about-bio a:hover { border-bottom-color: var(--maroon); }
+
+    .about-bio + .about-bio { margin-top: 16px; }
+
+    /* ── NEWS ── */
+    .news-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line-light);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .news-item:last-child { border-bottom: none; }
+
+    .news-date {
+      font-weight: 800;
+      color: var(--maroon);
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .news-text a {
+      color: var(--maroon);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(122,0,25,.25);
+    }
+
+    /* ── RESEARCH ── */
+    .research-area {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .research-area-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 900;
+      font-size: 17px;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .research-area p {
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    /* ── PUBLICATIONS ── */
+    .pub-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .15s ease;
+    }
+
+    .pub-card:hover { box-shadow: var(--shadow-md); }
+
+    .pub-card.featured {
+      border-left: 4px solid var(--maroon);
+    }
+
+    .pub-card-inner {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .pub-img {
+      width: 140px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pub-card-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+
+    .pub-authors {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .me {
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .pub-venue {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--maroon);
+      background: var(--maroon-bg);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .pub-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--maroon);
+      border-bottom: 1.5px solid rgba(122,0,25,.25);
+    }
+
+    .pub-link:hover { border-bottom-color: var(--maroon); }
+
+    .pub-status {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--light-muted);
+      font-style: italic;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-card {
+      display: grid;
+      grid-template-columns: 6px 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .edu-dot-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6px;
+    }
+
+    .edu-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--maroon);
+      flex-shrink: 0;
+    }
+
+    .edu-line {
+      width: 2px;
+      flex: 1;
+      background: var(--line);
+      margin-top: 4px;
+    }
+
+    .edu-info {
+      padding-bottom: 10px;
+    }
+
+    .edu-school {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .edu-degree {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .edu-detail {
+      font-size: 13.5px;
+      color: var(--maroon);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    /* ── TEACHING ── */
+    .teach-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .teach-term {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .teach-course {
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .teach-desc {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-top: 6px;
+    }
+
+    /* ── SKILLS ── */
+    .skill-group {
+      margin-bottom: 18px;
+    }
+
+    .skill-label {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 8px;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 99px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 50px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: var(--light-muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-quote {
+      font-style: italic;
+      max-width: 55ch;
+      margin: 0 auto 10px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    .footer-author {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ── MOBILE NAV ── */
+    .mobile-header {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--maroon);
+      padding: 12px 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mobile-brand {
+      color: #fff;
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    .hamburger {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger svg { width: 26px; height: 26px; fill: #fff; }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(0,0,0,.4);
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 280px;
+      z-index: 301;
+      background: var(--card);
+      transform: translateX(-100%);
+      transition: transform .25s ease;
+      overflow-y: auto;
+      padding: 28px 20px;
+    }
+
+    .mobile-drawer.open { transform: translateX(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .page-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar { display: none; }
+
+      .mobile-header { display: flex; }
+
+      .main {
+        padding: 24px 18px 50px;
+      }
+
+      .pub-card-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .pub-img {
+        width: 100%;
+        max-width: 200px;
+      }
+
+      .news-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- MOBILE HEADER -->
+  <div class="mobile-header">
+    <span class="mobile-brand">Eric Onyame</span>
+    <button class="hamburger" onclick="toggleDrawer()" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+    </button>
+  </div>
+
+  <!-- MOBILE OVERLAY + DRAWER -->
+  <div class="mobile-overlay" id="mobileOverlay" onclick="toggleDrawer()"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div style="text-align:center;margin-bottom:20px;">
+      <div class="photo-frame" style="width:100px;height:100px;margin:0 auto 12px;">
+        <img src="Figures/Eric_Onyame.png" alt="Eric Onyame" />
+      </div>
+      <div class="sidebar-name" style="font-size:20px;">Eric Onyame</div>
+      <div class="sidebar-title">PhD Candidate · UVA Data Science</div>
+    </div>
+    <nav class="sidebar-nav" id="mobileNav">
+      <a data-page="about" class="active" onclick="go('about');toggleDrawer();">About</a>
+      <a data-page="news" onclick="go('news');toggleDrawer();">News</a>
+      <a data-page="research" onclick="go('research');toggleDrawer();">Research</a>
+      <a data-page="publications" onclick="go('publications');toggleDrawer();">Publications</a>
+      <a data-page="education" onclick="go('education');toggleDrawer();">Education</a>
+      <a data-page="teaching" onclick="go('teaching');toggleDrawer();">Teaching</a>
+      <a data-page="skills" onclick="go('skills');toggleDrawer();">Skills</a>
+    </nav>
+    <div style="margin-top:20px;">
+      <a class="cv-btn" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-3-7H9v2h6v-2zm0 4H9v2h6v-2z"/></svg>
+        View CV
+      </a>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+    <!-- SIDEBAR (desktop) -->
+    <aside class="sidebar">
+      <div class="photo-frame">
+        <img src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
+      </div>
+
+      <div class="sidebar-name">Eric Onyame</div>
+      <div class="sidebar-title">PhD Candidate<br>University of Virginia<br>School of Data Science</div>
+
+      <div class="sidebar-tags">
+        <span class="tag">Trustworthy AI</span>
+        <span class="tag">AI Safety</span>
+        <span class="tag">Multilingual AI</span>
+        <span class="tag">Multimodal AI</span>
+      </div>
+
+      <div class="sidebar-links">
+        <a class="s-icon" href="https://github.com/Eric-Onyame" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.75 5.64.75 12.02c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.26.79-.57v-2.1c-3.2.71-3.88-1.58-3.88-1.58-.53-1.37-1.29-1.73-1.29-1.73-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.28.73-1.58-2.55-.3-5.23-1.3-5.23-5.8 0-1.28.45-2.33 1.19-3.15-.12-.3-.52-1.5.11-3.14 0 0 .98-.32 3.2 1.2a10.7 10.7 0 0 1 2.92-.4c.99 0 1.99.14 2.92.4 2.22-1.52 3.2-1.2 3.2-1.2.63 1.64.24 2.84.12 3.14.74.82 1.19 1.87 1.19 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.78 1.08.78 2.18v3.23c0 .31.2.68.8.57 4.56-1.53 7.84-5.86 7.84-10.96C23.25 5.64 18.27.5 12 .5z"/></svg>
+        </a>
+        <a class="s-icon" href="https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24"><path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3zm-6.5 9.5V14c0 2.76 2.91 5 6.5 5s6.5-2.24 6.5-5v-1.5L12 16 5.5 12.5z"/></svg>
+        </a>
+        <a class="s-icon" href="https://www.linkedin.com/in/eric-onyame-2249371b4/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.66 4.78 6.11v9.35h-4v-8.29c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.15-3.18 4.37v8.44h-4V7.98z"/></svg>
+        </a>
+      </div>
+
+      <div class="sidebar-email">
+        <a href="mailto:reh6ed@virginia.edu">reh6ed@virginia.edu</a>
+      </div>
+
+      <nav class="sidebar-nav" id="desktopNav">
+        <a data-page="about" class="active" onclick="go('about')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          About
+        </a>
+        <a data-page="news" onclick="go('news')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg>
+          News
+        </a>
+        <a data-page="research" onclick="go('research')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Research
+        </a>
+        <a data-page="publications" onclick="go('publications')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Publications
+        </a>
+        <a data-page="education" onclick="go('education')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          Education
+        </a>
+        <a data-page="teaching" onclick="go('teaching')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          Teaching
+        </a>
+        <a data-page="skills" onclick="go('skills')">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Skills
+        </a>
+      </nav>
+
+      <div class="sidebar-cv">
+        <a class="cv-btn" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-3-7H9v2h6v-2zm0 4H9v2h6v-2z"/></svg>
+          View CV
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- ABOUT -->
+      <div class="page active" id="page-about">
+        <h1 class="page-title">About Me</h1>
+        <p class="page-subtitle">PhD Candidate at the University of Virginia School of Data Science</p>
+
+        <p class="about-bio">
+          I am a PhD candidate in Data Science at the University of Virginia School of Data Science, where I am fortunate to work with
+          <a href="https://chirag-agarwall.github.io/" target="_blank" rel="noopener noreferrer">Dr. Chirag Agarwal</a>
+          in the
+          <a href="https://chirag-agarwall.github.io/" target="_blank" rel="noopener noreferrer">AIKYAM Lab</a>.
+          My research focuses on <strong>Trustworthy AI</strong>, with particular emphasis on <strong>Multilingual AI</strong>,
+          <strong>AI Safety</strong>, and <strong>Multimodal AI</strong>.
+        </p>
+
+        <p class="about-bio">
+          Before starting my PhD, I earned an MS in Mathematics from the University of Tennessee at Chattanooga, where I worked with
+          <a href="https://www.utc.edu/directory/ldh382-mathematics-lakmali/ldh382" target="_blank" rel="noopener noreferrer">Dr. Lakmali Weerasena</a>
+          on facility location problems in mathematical optimization.
+          I received my bachelor's degree in Mathematics with Economics (First Class Honors) from the University of Cape Coast in Ghana.
+        </p>
+
+        <p class="about-bio">
+          I am broadly interested in building AI systems that are safe, robust, and worthy of user trust — systems whose outputs are honest, harmless, helpful, and faithful to evidence across diverse users, languages, and contexts.
+        </p>
+      </div>
+
+      <!-- NEWS -->
+      <div class="page" id="page-news">
+        <h1 class="page-title">News</h1>
+        <p class="page-subtitle">Recent updates and milestones.</p>
+
+        <div class="news-item">
+          <div class="news-date">Apr 2026</div>
+          <div class="news-text">🎉 One paper on multilingual medical reasoning in LLMs accepted to <a href="https://2026.aclweb.org/" target="_blank" rel="noopener noreferrer">ACL 2026</a> (Main Conference, Oral). See you in San Diego!</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Jun 2025</div>
+          <div class="news-text">Passed the qualifying exam. 🎉</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Mar 2025</div>
+          <div class="news-text">Gave a talk on applications of large language models at the UVA School of Data Science.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Aug 2023</div>
+          <div class="news-text">Started my PhD at the University of Virginia School of Data Science. 🎉</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Mar 2023</div>
+          <div class="news-text">Received the 2023 Outstanding Master's Student in Mathematics award at UTC. 🎉</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Feb 2023</div>
+          <div class="news-text">Defended master's thesis: <em>Covering Problem with Minimum-Radius Enclosing Circle</em>.</div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Apr 2022</div>
+          <div class="news-text">Inducted into Pi Mu Epsilon Mathematics Honor Society.</div>
+        </div>
+      </div>
+
+      <!-- RESEARCH -->
+      <div class="page" id="page-research">
+        <h1 class="page-title">Research</h1>
+        <p class="page-subtitle">I spend most of my time thinking about how to make AI models more reliable and aligned with human values.</p>
+
+        <div class="research-area">
+          <div class="research-area-title">Multilingual AI</div>
+          <p>How can we build models, representations, and evaluation pipelines that generalize across languages and cultures, while producing responses that are consistent, accurate, and high-quality in the user's language?</p>
+        </div>
+
+        <div class="research-area">
+          <div class="research-area-title">AI Safety</div>
+          <p>How can we detect and mitigate unsafe or misleading behaviors in advanced AI systems, including deception, manipulation, sycophancy, and scheming? I study these through interpretability-based methods, safety evaluations, and work on alignment and control.</p>
+        </div>
+
+        <div class="research-area">
+          <div class="research-area-title">Multimodal AI</div>
+          <p>How do these challenges extend beyond text to models that reason across multiple modalities? I am interested in making multimodal systems robust to distribution shifts, out-of-domain inputs, and safety risks in complex settings.</p>
+        </div>
+      </div>
+
+      <!-- PUBLICATIONS -->
+      <div class="page" id="page-publications">
+        <h1 class="page-title">Publications</h1>
+        <p class="page-subtitle">Selected publications and ongoing work.</p>
+
+        <div class="pub-card featured">
+          <div class="pub-card-inner">
+            <img src="Figures/cure_med.png" alt="CURE-Med figure" class="pub-img" />
+            <div>
+              <div class="pub-card-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
+              <div class="pub-authors"><span class="me">Eric Onyame</span>, Akash Ghosh, Subhadip Baidya, Sriparna Saha, Xiuying Chen, Chirag Agarwal.</div>
+              <div><span class="pub-venue">ACL 2026 · Oral</span></div>
+              <div><a class="pub-link" href="https://arxiv.org/abs/2601.13262" target="_blank" rel="noopener noreferrer">arXiv →</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-card-title">The Robustness of Existing AI Monitors</div>
+          <div class="pub-authors"><span class="me">Eric Onyame</span>, Chirag Agarwal.</div>
+          <div class="pub-status">In progress</div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-card-title">Counterfactual LLM Verifiers for Math and Logic Reasoning Tasks</div>
+          <div class="pub-authors">Elita Lobo, <span class="me">Eric Onyame</span>, Yair Zick, Chirag Agarwal.</div>
+          <div class="pub-status">In progress</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="page" id="page-education">
+        <h1 class="page-title">Education</h1>
+        <p class="page-subtitle">Academic journey.</p>
+
+        <div class="edu-card">
+          <div class="edu-dot-line"><div class="edu-dot"></div><div class="edu-line"></div></div>
+          <div class="edu-info">
+            <div class="edu-school">University of Virginia</div>
+            <div class="edu-degree">PhD in Data Science · Aug 2023 – Present</div>
+            <div class="edu-detail">Advisor: Dr. Chirag Agarwal</div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-dot-line"><div class="edu-dot"></div><div class="edu-line"></div></div>
+          <div class="edu-info">
+            <div class="edu-school">The University of Tennessee at Chattanooga</div>
+            <div class="edu-degree">MS in Mathematics · Aug 2021 – May 2023</div>
+            <div class="edu-detail">Advisor: Dr. Lakmali Weerasena</div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-dot-line"><div class="edu-dot"></div></div>
+          <div class="edu-info">
+            <div class="edu-school">University of Cape Coast, Ghana</div>
+            <div class="edu-degree">BSc in Mathematics with Economics · Aug 2016 – Jul 2020</div>
+            <div class="edu-detail">First Class Honors</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEACHING -->
+      <div class="page" id="page-teaching">
+        <h1 class="page-title">Teaching</h1>
+        <p class="page-subtitle">Teaching Assistant for core Data Science and AI courses.</p>
+
+        <div class="teach-card">
+          <div class="teach-term">Spring 2026</div>
+          <div class="teach-course">DS 6050: Deep Learning</div>
+          <div class="teach-desc">Led office hours, assisted with assignments, and guided students on optimization, regularization, and neural network architectures.</div>
+        </div>
+        <div class="teach-card">
+          <div class="teach-term">Fall 2025</div>
+          <div class="teach-course">DS 7800: Research Methods in Data Science</div>
+          <div class="teach-desc">Supported student research development, methodology design, and critical evaluation of data-driven studies.</div>
+        </div>
+        <div class="teach-card">
+          <div class="teach-term">Spring 2025</div>
+          <div class="teach-course">DS 6051: Decoding Large Language Models</div>
+          <div class="teach-desc">Assisted instruction on modern language models, including projects, readings, and practical evaluation and prompting workflows.</div>
+        </div>
+        <div class="teach-card">
+          <div class="teach-term">Fall 2024</div>
+          <div class="teach-course">DS 6600: Data Engineering I</div>
+          <div class="teach-desc">Facilitated hands-on sessions on large-scale data systems and data visualization pipelines.</div>
+        </div>
+        <div class="teach-card">
+          <div class="teach-term">Fall 2024</div>
+          <div class="teach-course">DS 1001: Foundations of Data Science</div>
+          <div class="teach-desc">Supported student understanding of core data science concepts through discussion, problem-solving, and feedback.</div>
+        </div>
+        <div class="teach-card">
+          <div class="teach-term">2021 – 2022</div>
+          <div class="teach-course">Elementary Statistical Analysis; College Algebra (UTC)</div>
+          <div class="teach-desc">Delivered lectures, graded assessments, and provided structured academic support to undergraduate students.</div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="page" id="page-skills">
+        <h1 class="page-title">Skills</h1>
+        <p class="page-subtitle">Technical proficiencies.</p>
+
+        <div class="skill-group">
+          <div class="skill-label">Languages</div>
+          <div class="skill-pills">
+            <span class="pill">Python</span>
+            <span class="pill">R</span>
+            <span class="pill">Julia</span>
+            <span class="pill">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Tools &amp; Libraries</div>
+          <div class="skill-pills">
+            <span class="pill">PyTorch</span>
+            <span class="pill">PySpark</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Git</span>
+            <span class="pill">NumPy</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">scikit-learn</span>
+            <span class="pill">LaTeX</span>
+            <span class="pill">Cloud Computing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER (shown on every page) -->
+      <div class="footer">
+        <p class="footer-quote">
+          "The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night."
+          <span class="footer-author">— Henry Wadsworth Longfellow</span>
+        </p>
+        <p>© <script>document.write(new Date().getFullYear())</script> Eric Onyame. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function go(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + page).classList.add('active');
+
+      document.querySelectorAll('.sidebar-nav a, #mobileNav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === page);
+      });
+
+      // scroll main to top
+      document.querySelector('.main').scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+
+    function toggleDrawer() {
+      document.getElementById('mobileOverlay').classList.toggle('open');
+      document.getElementById('mobileDrawer').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric Onyame | PhD Candidate, UVA Data Science</title>
   <meta
     name="description"
     content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Trustworthy AI, AI Safety, Multilingual AI, and Multimodal AI."
@@ -867,965 +1914,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eric Onyame | PhD Candidate, UVA Data Science</title>
-  <meta name="description" content="Eric Onyame — PhD Candidate at the University of Virginia School of Data Science. Trustworthy AI, AI Safety, Multilingual AI, Multimodal AI." />
-  <link rel="canonical" href="https://eric-onyame.github.io/" />
- 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Eric Onyame",
-    "url": "https://eric-onyame.github.io/",
-    "image": "https://eric-onyame.github.io/Figures/Eric_Onyame.png",
-    "jobTitle": "PhD Candidate",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "University of Virginia School of Data Science"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/eric-onyame-2249371b4/",
-      "https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en",
-      "https://github.com/Eric-Onyame",
-      "https://datascience.virginia.edu/people/eric-onyame"
-    ]
-  }
-  </script>
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111827;
-      --muted:#4b5563;
-      --line:#e5e7eb;
-
-      /* Red accent like your sample */
-      --red:#7A0019;       /* deep red */
-      --red2:#A10022;      /* hover red */
-      --soft:#fafafa;
-      --card:#ffffff;
-      --shadow: 0 10px 30px rgba(17,24,39,.10);
-    }
-
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: var(--bg); color: var(--text); }
-    a{ color: inherit; text-decoration:none; }
-    a:hover{ opacity:.95; }
-
-    .wrap{ max-width: 1060px; margin: 0 auto; padding: 0 20px; }
-
-    /* NAV */
-    .nav{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: var(--red);
-      border-bottom: 1px solid rgba(255,255,255,.18);
-    }
-    .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 14px 0;
-      gap: 18px;
-    }
-    .brand{
-      color:#fff;
-      font-weight: 750;
-      letter-spacing:.2px;
-      font-size: 18px;
-      white-space: nowrap;
-    }
-    .menu{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-    }
-    .menu a{
-      color:#fff;
-      font-size: 14px;
-      font-weight: 650;
-      padding: 7px 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.0);
-    }
-    .menu a:hover{
-      background: rgba(255,255,255,.12);
-      border-color: rgba(255,255,255,.18);
-    }
-
-    /* HERO */
-    .hero{
-      background: var(--bg);
-      padding: 38px 0 26px;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 0.85fr 1.15fr; /* photo left, content right */
-      gap: 26px;
-      align-items: center;
-    }
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size: 13px;
-      color: var(--muted);
-      border: 1px solid var(--line);
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--soft);
-    }
-    .kicker span{
-      width: 8px; height: 8px; border-radius: 999px;
-      background: var(--red);
-    }
-
-    h1{
-      margin: 14px 0 6px;
-      font-size: clamp(32px, 3.6vw, 44px);
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-    }
-    .subtitle{
-      margin: 0 0 14px;
-      font-size: 16px;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-    .subtitle b{ color: var(--text); font-weight: 750; }
-
-    .bio{
-      margin: 0 0 16px;
-      font-size: 15.5px;
-      line-height: 1.7;
-      color: var(--text);
-      max-width: 70ch;
-    }
-
-    .actions{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items:center;
-      margin-top: 10px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 2px 0 rgba(17,24,39,.03);
-    }
-    .btn.primary{
-      border: 1px solid rgba(0,0,0,0);
-      background: var(--red);
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(122,0,25,.18);
-    }
-    .btn.primary:hover{ background: var(--red2); }
-
-    /* SOCIAL ICONS */
-    .social{
-      display:flex;
-      gap: 10px;
-      align-items:center;
-      margin-top: 14px;
-    }
-    .icon{
-      width: 40px;
-      height: 40px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: 0 2px 0 rgba(17,24,39,.03);
-    }
-    .icon:hover{
-      border-color: rgba(122,0,25,.35);
-      box-shadow: 0 10px 22px rgba(122,0,25,.10);
-      transform: translateY(-1px);
-      transition: .15s ease;
-    }
-    .icon svg{ width: 20px; height: 20px; fill: var(--red); }
-
-    /* PHOTO CARD (LEFT) */
-    .photo-card{
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px;
-      box-shadow: var(--shadow);
-    }
-    .photo{
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 4.4;    /* safer ratio so head stays visible */
-      object-fit: cover;
-      object-position: center 6%; /* IMPORTANT: keeps head visible */
-      border-radius: 14px;
-      border: 1px solid rgba(17,24,39,.08);
-      display:block;
-    }
-    .photo-caption{
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.45;
-      text-align: center; 
-    }
-
-    /* SECTIONS */
-    main{ padding: 26px 0 80px; }
-    section{
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line);
-      scroll-margin-top: 78px; /* prevents sticky nav hiding titles */
-    }
-    section:last-child{ border-bottom:none; }
-    h2{
-      margin: 0 0 10px;
-      font-size: 22px;
-      letter-spacing: -0.2px;
-    }
-    .section-note{ margin: 0; color: var(--muted); line-height:1.75; }
-
-    /* MOBILE */
-    @media (max-width: 900px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .menu{ gap: 6px; }
-    }
-
-    .bio a{
-      color: var(--red);
-      font-weight: 700;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(122,0,25,.25);
-    }
-    .bio a:hover{
-      border-bottom-color: rgba(122,0,25,.65);
-    }
-
-   .teaching-list{
-     list-style: none;
-     padding: 0;
-     margin: 16px 0 0;
-     display: grid;
-     gap: 12px;
-   }
-   
-   .teaching-list li{
-     border: 1px solid var(--line);
-     border-radius: 14px;
-     padding: 12px 14px;
-     background: #fff;
-     box-shadow: 0 2px 0 rgba(17,24,39,.03);
-   }
-   
-   .teaching-list .term{
-     display: inline-block;
-     font-weight: 800;
-     color: var(--red);
-     margin-right: 10px;
-   }
-   
-   .teaching-list .role{
-     display: inline-block;
-     font-weight: 750;
-     color: var(--text);
-     margin-right: 10px;
-   }
-   
-   .teaching-list .course{
-     display: inline-block;
-     color: var(--text);
-     font-weight: 650;
-   }
-   
-   .teaching-list .details{
-     display: block;
-     margin-top: 6px;
-     color: var(--muted);
-     line-height: 1.6;
-   }
-
-   .research-list{
-  margin: 10px 0 0 18px;
-  padding: 0;
-  color: var(--text);
-  line-height: 1.75;
-}
-.research-list li{
-  margin: 10px 0;
-}
-.research-list b{
-  color: var(--red);
-}
-
-   .news-list{
-  margin: 14px 0 0;
-  padding-left: 0;
-  list-style: none;
-  display: grid;
-  gap: 10px;
-}
-
-.news-list li{
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 10px 14px;
-  background: #fff;
-  box-shadow: 0 2px 0 rgba(17,24,39,.03);
-  line-height: 1.7;
-}
-
-.news-date{
-  display: inline-block;
-  min-width: 74px;
-  font-weight: 800;
-  color: var(--red);
-  margin-right: 10px;
-}
-
-   .pub-subhead{
-  margin: 18px 0 10px;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--text);
-}
-
-.pub-list{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.pub-item{
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: #fff;
-  box-shadow: 0 2px 0 rgba(17,24,39,.03);
-  line-height: 1.65;
-}
-
-.pub-title{
-  font-weight: 600;        
-  color: #1f2937;          
-}
-
-.pub-authors{
-  color: var(--muted);
-}
-
-.pub-status{
-  color: var(--red);
-  font-weight: 750;
-}
-.me{
-  font-weight: 900;
-  color: var(--text);
-  border-bottom: 2px solid rgba(122,0,25,.35);
-}
-
-.pub-featured{
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 18px;
-    align-items: start;
-  }
-
-  .pub-thumb{
-    width: 100%;
-  }
-
-  .pub-image{
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(17,24,39,.08);
-  }
-
-  .pub-content{
-    min-width: 0;
-  }
-
-  .pub-venue{
-    display: inline-block;
-    margin-top: 4px;
-    color: var(--text);
-    font-weight: 700;
-  }
-
-  .pub-links{
-    display: inline-block;
-    margin-top: 8px;
-  }
-
-  .pub-links a{
-    color: var(--red);
-    font-weight: 750;
-    text-decoration: none;
-    border-bottom: 2px solid rgba(122,0,25,.25);
-    padding-bottom: 2px;
-  }
-
-  .pub-links a:hover{
-    border-bottom-color: rgba(122,0,25,.65);
-  }
-
-  @media (max-width: 760px){
-    .pub-featured{
-      grid-template-columns: 1fr;
-    }
-
-    .pub-thumb{
-      max-width: 320px;
-    }
-  }
-
-   .site-footer{
-  margin-top: 40px;
-  padding: 32px 0;
-  border-top: 1px solid var(--line);
-  background: #fff;
-}
-
-.footer-email{
-  text-align: center;
-  font-weight: 800;
-  color: var(--text);
-  margin-bottom: 14px;
-}
-
-.footer-email a{
-  color: var(--text);
-  text-decoration: none;
-  border-bottom: 2px solid rgba(122,0,25,.25);
-  padding-bottom: 2px;
-}
-
-.footer-email a:hover{
-  border-bottom-color: rgba(122,0,25,.65);
-  color: var(--red);
-}
-
-.footer-quote{
-  max-width: 78ch;
-  margin: 0 auto 14px;
-  text-align: center;
-  color: var(--muted);
-  line-height: 1.8;
-  font-size: 14.5px;
-}
-
-.footer-author{
-  display: block;
-  margin-top: 6px;
-  color: var(--text);
-  font-weight: 750;
-}
-
-.footer-meta{
-  text-align: center;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-
-   .skills-list{
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: grid;
-  gap: 12px;
-}
-
-.skills-list li{
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: #fff;
-  box-shadow: 0 2px 0 rgba(17,24,39,.03);
-  line-height: 1.7;
-}
-
-.skill-label{
-  font-weight: 850;
-  color: var(--red);
-  margin-right: 8px;
-}
-
-.skill-items{
-  color: var(--text);
-}
-
-
-   .cv-link{
-  color: var(--red);
-  font-weight: 800;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(122,0,25,.25);
-  padding-bottom: 2px;
-}
-.cv-link:hover{
-  border-bottom-color: rgba(122,0,25,.65);
-}
-
- /* Reduce extra whitespace before the footer */
-main{
-  padding-bottom: 24px;   /* was likely 80px */
-}
-
-section{
-  padding: 18px 0;        /* was likely 26px */
-}
-
-/* Make the CV section tighter specifically */
-#cv{
-  padding-bottom: 10px;
-}
-
-/* Reduce top margin of footer so it sits closer */
-.site-footer{
-  margin-top: 16px;       /* was likely 40px */
-  padding: 22px 0;        /* was likely 32px */
-}
-
-   .edu-list{
-  list-style: none;
-  padding: 0;
-  margin: 16px 0 0;
-  display: grid;
-  gap: 12px;
-}
-
-.edu-list li{
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: #fff;
-  box-shadow: 0 2px 0 rgba(17,24,39,.03);
-  line-height: 1.7;
-}
-
-.edu-school{
-  display: block;
-  font-weight: 850;
-  color: var(--text);
-}
-
-.edu-meta{
-  display: block;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-.edu-detail{
-  display: block;
-  color: var(--red);
-  font-weight: 750;
-  margin-top: 6px;
-}
-
-
-
-
-
-
-
-
-
-
-  </style>
-</head>
-
-<body>
-  <!-- NAV -->
-  <div class="nav">
-    <div class="wrap">
-      <div class="nav-inner">
-        <div class="brand">Eric Onyame</div>
-        <div class="menu" aria-label="Primary navigation">
-          <a href="#education">Education</a>
-          <a href="#news">News</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#cv">CV</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-
-        <!-- PHOTO LEFT -->
-        <div class="photo-card">
-          <img class="photo" src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
-          <div class="photo-caption">
-            Email: reh6ed@virginia.edu
-          </div>
-        </div>
-
-        <!-- TEXT RIGHT -->
-        <div>
-          <div class="kicker">
-            <span></span>
-            Trustworthy AI · AI Safety · Multilingual AI · Multimodal AI
-          </div>
-
-          <h1>Eric Onyame</h1>
-
-          <p class="subtitle">
-            <b>PhD Candidate</b> · University of Virginia · <b>School of Data Science</b>
-          </p>
-
-          <p class="bio">
-            I am a third-year PhD candidate in Data Science at the University of Virginia School of Data Science, where I am fortunate to work with
-            <a href="https://chirag-agarwall.github.io/" target="_blank" rel="noopener noreferrer">Dr. Chirag Agarwal</a>
-            in the
-            <a href="https://chirag-agarwall.github.io/" target="_blank" rel="noopener noreferrer">AIKYAM Lab</a>.
-            My research focuses on Trustworthy AI, with particular emphasis on Multilingual AI, AI Safety, and Multimodal Applications. 
-            Before starting my PhD, I earned an MS in Mathematics from the University of Tennessee at Chattanooga, where I worked with
-            <a href="https://www.utc.edu/directory/ldh382-mathematics-lakmali/ldh382" target="_blank" rel="noopener noreferrer">Dr. Lakmali Weerasena</a>
-            on facility location science problems in mathematical optimization.
-            I received my bachelor’s degree in Mathematics with Economics (First Class Honors) from the University of Cape Coast in Ghana.
-          </p>
-
-
-
-
-          <div class="actions">
-            <!-- Update once you upload CV: e.g., href="files/Eric_Onyame_CV.pdf" -->
-            <a class="btn primary" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
-            <a class="btn" href="#publications">Selected Publications</a>
-          </div>
-
-          <div class="social" aria-label="Social links">
-            <!-- GitHub -->
-            <a class="icon" href="https://github.com/Eric-Onyame" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 .5C5.73.5.75 5.64.75 12.02c0 5.1 3.29 9.43 7.86 10.96.58.11.79-.26.79-.57v-2.1c-3.2.71-3.88-1.58-3.88-1.58-.53-1.37-1.29-1.73-1.29-1.73-1.05-.73.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.28.73-1.58-2.55-.3-5.23-1.3-5.23-5.8 0-1.28.45-2.33 1.19-3.15-.12-.3-.52-1.5.11-3.14 0 0 .98-.32 3.2 1.2a10.7 10.7 0 0 1 2.92-.4c.99 0 1.99.14 2.92.4 2.22-1.52 3.2-1.2 3.2-1.2.63 1.64.24 2.84.12 3.14.74.82 1.19 1.87 1.19 3.15 0 4.51-2.69 5.5-5.25 5.79.41.36.78 1.08.78 2.18v3.23c0 .31.2.68.8.57 4.56-1.53 7.84-5.86 7.84-10.96C23.25 5.64 18.27.5 12 .5z"/>
-              </svg>
-            </a>
-
-            <!-- Google Scholar -->
-            <a class="icon" href="https://scholar.google.com/citations?user=u_w-h-MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3 1 8l11 5 9-4.09V17h2V8L12 3zm-6.5 9.5V14c0 2.76 2.91 5 6.5 5s6.5-2.24 6.5-5v-1.5L12 16 5.5 12.5z"/>
-              </svg>
-            </a>
-
-            <!-- LinkedIn -->
-            <a class="icon" href="https://www.linkedin.com/in/eric-onyame-2249371b4/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.66 4.78 6.11v9.35h-4v-8.29c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.15-3.18 4.37v8.44h-4V7.98z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- SECTIONS (kept as-is, clear + spaced) -->
-  <main>
-    <div class="wrap">
-      <section id="education">
-  <h2>Education</h2>
-
-  <ul class="edu-list">
-    <li>
-      <span class="edu-school">University of Virginia</span>
-      <span class="edu-meta">PhD in Data Science · Aug 2023 – Present</span>
-      <span class="edu-detail">Advisor: Dr. Chirag Agarwal</span>
-    </li>
-
-    <li>
-      <span class="edu-school">The University of Tennessee at Chattanooga</span>
-      <span class="edu-meta">MS in Mathematics · Aug 2021 – May 2023</span>
-      <span class="edu-detail">Advisor: Dr. Lakmali Weeraseena</span>
-    </li>
-
-    <li>
-      <span class="edu-school">University of Cape Coast, Ghana</span>
-      <span class="edu-meta">BSc in Mathematics with Economics · Aug 2016 – Jul 2020</span>
-      <span class="edu-detail">First Class Honors</span>
-    </li>
-  </ul>
-</section>
-
-
-      <section id="news">
-  <h2>News</h2>
-  <ul class="news-list">
-    <li>
-  <span class="news-date">Apr 06 2026</span>
-   One paper on multilingual medical reasoning in LLMs is accepted to <a href="https://2026.aclweb.org/" target="_blank" rel="noopener noreferrer">ACL 2026</a> (Main Conference, Oral). See you in San Diego, California! 🎉
-</li>
-
-   <li>
-      <span class="news-date">June 2025</span>
-      Yes! I passed the qualifying exam.🎉
-    </li>
-
-    <li>
-      <span class="news-date">Mar 2025</span>
-      Gave a talk on the applications of large language models at the UVA School of Data Science.
-    </li>
-
-   <li>
-      <span class="news-date">August 2023</span>
-      Started PhD at the University of Virginia, School of Data Science.🎉
-    </li>
-
-    <li>
-      <span class="news-date">Mar 2023</span>
-      Received the 2023 Outstanding Master’s Student in Mathematics award at the University of Tennessee at Chattanooga.🎉
-    </li>
-
-    <li>
-      <span class="news-date">Feb 2023</span>
-      Defended my master’s thesis in mathematical optimization.
-      <em>Title: Covering Problem with Minimum-Radius Enclosing Circle</em>.
-    </li>
-
-   <li>
-      <span class="news-date">April 2022</span>
-      Inductee, Pi-Mu Epsilon Mathematics Honor Society, USA.
-    </li>
-
-  </ul>
-</section>
-
-
-
-      <section id="research">
-  <h2>Research</h2>
-
-  <p class="section-note">
-    <!-- I am broadly interested in Trustworthy AI. I am curious and motivated by a simple question: how can we design AI systems whose outputs are reliable, faithful to evidence, and worthy of user trust? -->
-   I spend most of my time thinking about how to make AI models more reliable and aligned with human values. I am broadly interested in Trustworthy AI, with a focus on building systems that are safe, robust, and worthy of user trust. I am motivated by a central question: how can we design AI models whose outputs are honest, harmless, helpful, and faithful to evidence across diverse users, languages, and contexts?
-  </p>
-
-  <p class="section-note">
-    Recently, I have been especially interested in three directions:
-  </p>
-
-  <ol class="research-list">
-    <li>
-      <b>Multilingual AI:</b> How can we build models, representations, and evaluation pipelines that generalize across languages and cultures, while producing responses that are consistent, accurate, and high-quality in the user’s language?
-    </li>
-    <li>
-      <b>AI Safety:</b> How can we detect and mitigate unsafe or misleading behaviors in advanced AI systems, including deception, manipulation, sycophancy, and scheming? I study these questions through interpretability-based methods, safety evaluations, and work on alignment and control.
-    </li>
-    <li>
-      <b>Multimodal AI:</b> How do these challenges extend beyond text to models that reason across multiple modalities? I am interested in making multimodal systems robust to distribution shifts, out-of-domain inputs, and safety risks that emerge in more complex settings.
-    </li>
-  </ol>
-</section>
-
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p class="section-note">Selected publications and ongoing work.</p>
-
-  <ul class="pub-list">
-    <li class="pub-item pub-featured">
-      <div class="pub-thumb">
-        <img src="Figures/cure_med.png" alt="Main figure from the CURE-Med paper" class="pub-image">
-      </div>
-      <div class="pub-content">
-        <span class="pub-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</span><br>
-        <span class="pub-authors"><span class="me">Eric Onyame</span>, Akash Ghosh, Subhadip Baidya, Sriparna Saha, Xiuying Chen.</span><br>
-        <span class="pub-venue">Accepted to <strong>ACL 2026</strong> (Main Conference, Oral Presentation)</span><br>
-        <span class="pub-links">
-          <a href="https://arxiv.org/abs/2601.13262" target="_blank" rel="noopener noreferrer">arXiv</a>
-        </span>
-      </div>
-    </li>
-
-    <li class="pub-item">
-      <span class="pub-title">The Robustness of Existing AI Monitors</span><br>
-      <span class="pub-authors"><span class="me">Eric Onyame</span>, Chirag Agarwal.</span><br>
-      <span class="pub-status">(In progress)</span>
-    </li>
-
-    <li class="pub-item">
-      <span class="pub-title">Counterfactual LLM Verifiers for Math and Logic Reasoning Tasks</span><br>
-      <span class="pub-authors">Elita Lobo, <span class="me">Eric Onyame</span>, Yair Zick, Chirag Agarwal.</span><br>
-      <span class="pub-status">(In progress)</span>
-    </li>
-  </ul>
-</section>
-
-
-      <section id="teaching">
-  <h2>Teaching</h2>
-
-  <p class="section-note">
-  Teaching Assistant: Supported instruction and grading for core Data Science and AI courses, including:
-</p>
-
-<ul class="teaching-list">
-  <li>
-    <span class="term">Spring 2026</span>
-    <span class="course">DS 6050: Deep Learning</span>
-    <span class="details">
-      Led office hours, assisted with assignments, and guided students on optimization, regularization, and neural network architectures.
-    </span>
-  </li>
-
-  <li>
-    <span class="term">Fall 2025</span>
-    <span class="course">DS 7800: Research Methods in Data Science</span>
-    <span class="details">
-      Supported student research development, methodology design, and critical evaluation of data-driven studies.
-    </span>
-  </li>
-
-  <li>
-    <span class="term">Spring 2025</span>
-    <span class="course">DS 6051: Decoding Large Language Models</span>
-    <span class="details">
-      Assisted instruction on modern language models, including projects, readings, and practical evaluation and prompting workflows.
-    </span>
-  </li>
-
-  <li>
-    <span class="term">Fall 2024</span>
-    <span class="course">DS 6600: Data Engineering I: Data Management &amp; Visualization</span>
-    <span class="details">
-      Facilitated hands-on sessions on large-scale data systems and data visualization pipelines.
-    </span>
-  </li>
-
-  <li>
-    <span class="term">Fall 2024</span>
-    <span class="course">DS 1001: Foundations of Data Science</span>
-    <span class="details">
-      Supported student understanding of core data science concepts through discussion, problem-solving, and feedback.
-    </span>
-  </li>
-
-  <li>
-    <span class="term">Aug 2021 – Jun 2022</span>
-    <span class="course">Elementary Statistical Analysis; College Algebra (UTC)</span>
-    <span class="details">
-      Delivered lectures, graded assessments, and provided structured academic support to undergraduate students.
-    </span>
-  </li>
-</ul>
-
-
-       <section id="skills">
-         <h2>Skills</h2>
-       
-         <ul class="skills-list">
-           <li>
-             <span class="skill-label">Languages:</span>
-             <span class="skill-items">Python, R, Julia, SQL.</span>
-           </li>
-           <li>
-             <span class="skill-label">Tools and Libraries:</span>
-             <span class="skill-items">PyTorch, PySpark, Docker, Git, NumPy, Pandas, Matplotlib, scikit-learn, LaTeX, Cloud computing.</span>
-           </li>
-         </ul>
-       </section>
-
-
-
-<section id="cv">
-  <h2>CV</h2>
-  <p class="section-note">
-    <a class="cv-link" href="files/Eric_Onyame_CV.pdf" target="_blank" rel="noopener noreferrer">
-      Download / View my CV (PDF)
-    </a>
-  </p>
-</section>
-
-  </main>
-
-  <!-- Footer goes here, right after </main> -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-email">
-        <a href="mailto:reh6ed@virginia.edu">Email: reh6ed@virginia.edu</a>
-      </div>
-
-      <p class="footer-quote">
-        “The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night.”
-        <span class="footer-author">— Henry Wadsworth Longfellow</span>
-      </p>
-
-      <div class="footer-meta">
-        © <span id="year"></span> Eric Onyame. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
 </body>
 </html>
 
