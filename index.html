@@ -40,9 +40,9 @@
       --cream: #FDFAF6;
       --bg: #f8f7f5;
       --card: #ffffff;
-      --text: #1a1a1a;
-      --muted: #5c5c5c;
-      --light-muted: #8a8a8a;
+      --text: #1f1f1f;
+      --muted: #4a4a4a;
+      --light-muted: #7a7a7a;
       --line: #e8e4df;
       --line-light: #f0ece7;
       --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
@@ -61,9 +61,7 @@
     }
 
     body { min-height: 100vh; }
-
     a { color: inherit; text-decoration: none; }
-
     img { max-width: 100%; display: block; }
 
     /* ── LAYOUT ── */
@@ -167,11 +165,7 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .s-icon svg {
-      width: 17px;
-      height: 17px;
-      fill: var(--maroon);
-    }
+    .s-icon svg { width: 17px; height: 17px; fill: var(--maroon); }
 
     .sidebar-email {
       text-align: center;
@@ -186,11 +180,8 @@
       border-bottom: 1px solid rgba(122,0,25,.2);
     }
 
-    .sidebar-email a:hover {
-      border-bottom-color: var(--maroon);
-    }
+    .sidebar-email a:hover { border-bottom-color: var(--maroon); }
 
-    /* NAV */
     .sidebar-nav {
       margin-top: 28px;
       display: flex;
@@ -229,9 +220,7 @@
       opacity: .7;
     }
 
-    .sidebar-nav a.active .nav-icon {
-      opacity: 1;
-    }
+    .sidebar-nav a.active .nav-icon { opacity: 1; }
 
     .sidebar-cv {
       margin-top: auto;
@@ -255,16 +244,14 @@
     }
 
     .cv-btn:hover { background: var(--maroon-dark); }
-
     .cv-btn svg { width: 16px; height: 16px; fill: #fff; }
 
     /* ── MAIN CONTENT ── */
     .main {
-      padding: 36px 44px 60px;
+      padding: 40px 52px 60px;
       overflow-y: auto;
     }
 
-    /* PAGES */
     .page { display: none; animation: fadeIn .25s ease; }
     .page.active { display: block; }
 
@@ -273,36 +260,32 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* SECTION TITLES */
     .page-title {
       font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 900;
       letter-spacing: -.4px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .page-subtitle {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 28px;
-      max-width: 65ch;
+      font-size: 15.5px;
+      line-height: 1.75;
+      margin-bottom: 30px;
+      max-width: 68ch;
     }
 
-    /* Add it here */
     .section-note {
       color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 16px;
+      font-size: 15.5px;
+      line-height: 1.75;
+      margin-bottom: 18px;
     }
 
-    
-
-    /* ── ABOUT PAGE ── */
+    /* ── ABOUT ── */
     .about-bio {
-      font-size: 16px;
+      font-size: 16.5px;
       line-height: 1.85;
       color: var(--text);
       max-width: 68ch;
@@ -315,8 +298,93 @@
     }
 
     .about-bio a:hover { border-bottom-color: var(--maroon); }
+    .about-bio + .about-bio { margin-top: 18px; }
 
-    .about-bio + .about-bio { margin-top: 16px; }
+    .about-section-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      font-weight: 900;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      letter-spacing: -.2px;
+    }
+
+    .about-current {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--maroon);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-current p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--text);
+      max-width: 68ch;
+    }
+
+    .about-current .current-label {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 8px;
+    }
+
+    .about-pub-highlight {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .15s ease;
+    }
+
+    .about-pub-highlight:hover { box-shadow: var(--shadow-md); }
+
+    .about-pub-highlight .pub-card-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 700;
+      font-size: 15.5px;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+
+    .about-pub-highlight .pub-authors {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .about-pub-highlight .pub-venue {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--maroon);
+      background: var(--maroon-bg);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .about-pub-highlight .pub-link {
+      display: inline-block;
+      margin-top: 6px;
+      margin-left: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--maroon);
+      border-bottom: 1.5px solid rgba(122,0,25,.25);
+    }
+
+    .about-pub-highlight .pub-link:hover { border-bottom-color: var(--maroon); }
 
     /* ── NEWS ── */
     .news-item {
@@ -325,8 +393,8 @@
       gap: 14px;
       padding: 16px 0;
       border-bottom: 1px solid var(--line-light);
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 15.5px;
+      line-height: 1.75;
     }
 
     .news-item:last-child { border-bottom: none; }
@@ -335,7 +403,7 @@
       font-weight: 800;
       color: var(--maroon);
       font-size: 13px;
-      padding-top: 2px;
+      padding-top: 3px;
     }
 
     .news-text a {
@@ -349,7 +417,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px 22px;
+      padding: 22px 24px;
       margin-bottom: 14px;
       box-shadow: var(--shadow-sm);
     }
@@ -359,12 +427,12 @@
       font-weight: 900;
       font-size: 17px;
       color: var(--maroon);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .research-area p {
-      font-size: 14.5px;
-      line-height: 1.75;
+      font-size: 15px;
+      line-height: 1.8;
       color: var(--muted);
     }
 
@@ -373,22 +441,19 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 20px 22px;
+      padding: 22px 24px;
       margin-bottom: 14px;
       box-shadow: var(--shadow-sm);
       transition: box-shadow .15s ease;
     }
 
     .pub-card:hover { box-shadow: var(--shadow-md); }
-
-    .pub-card.featured {
-      border-left: 4px solid var(--maroon);
-    }
+    .pub-card.featured { border-left: 4px solid var(--maroon); }
 
     .pub-card-inner {
       display: grid;
       grid-template-columns: 140px 1fr;
-      gap: 18px;
+      gap: 20px;
       align-items: start;
     }
 
@@ -408,19 +473,16 @@
     }
 
     .pub-authors {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--muted);
       line-height: 1.6;
     }
 
-    .me {
-      font-weight: 800;
-      color: var(--text);
-    }
+    .me { font-weight: 800; color: var(--text); }
 
     .pub-venue {
       display: inline-block;
-      margin-top: 6px;
+      margin-top: 8px;
       font-size: 13px;
       font-weight: 700;
       color: var(--maroon);
@@ -442,8 +504,8 @@
 
     .pub-status {
       display: inline-block;
-      margin-top: 6px;
-      font-size: 12.5px;
+      margin-top: 8px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--light-muted);
       font-style: italic;
@@ -479,24 +541,22 @@
       margin-top: 4px;
     }
 
-    .edu-info {
-      padding-bottom: 10px;
-    }
+    .edu-info { padding-bottom: 10px; }
 
     .edu-school {
       font-family: 'Source Serif 4', Georgia, serif;
       font-weight: 900;
-      font-size: 16px;
+      font-size: 16.5px;
     }
 
     .edu-degree {
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--muted);
-      margin-top: 2px;
+      margin-top: 3px;
     }
 
     .edu-detail {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--maroon);
       font-weight: 700;
       margin-top: 4px;
@@ -507,7 +567,7 @@
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 16px 20px;
+      padding: 18px 22px;
       margin-bottom: 10px;
       box-shadow: var(--shadow-sm);
     }
@@ -522,21 +582,19 @@
 
     .teach-course {
       font-weight: 700;
-      font-size: 15px;
-      margin-top: 2px;
+      font-size: 15.5px;
+      margin-top: 3px;
     }
 
     .teach-desc {
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.7;
       margin-top: 6px;
     }
 
     /* ── SKILLS ── */
-    .skill-group {
-      margin-bottom: 18px;
-    }
+    .skill-group { margin-bottom: 20px; }
 
     .skill-label {
       font-size: 12px;
@@ -544,19 +602,19 @@
       color: var(--maroon);
       text-transform: uppercase;
       letter-spacing: .6px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .skill-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 7px;
     }
 
     .pill {
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 600;
-      padding: 6px 14px;
+      padding: 7px 16px;
       border-radius: 99px;
       border: 1px solid var(--line);
       background: var(--card);
@@ -587,7 +645,7 @@
       color: var(--text);
     }
 
-    /* ── MOBILE NAV ── */
+    /* ── MOBILE ── */
     .mobile-header {
       display: none;
       position: sticky;
@@ -599,11 +657,7 @@
       justify-content: space-between;
     }
 
-    .mobile-brand {
-      color: #fff;
-      font-weight: 800;
-      font-size: 17px;
-    }
+    .mobile-brand { color: #fff; font-weight: 800; font-size: 17px; }
 
     .hamburger {
       background: none;
@@ -640,33 +694,15 @@
 
     .mobile-drawer.open { transform: translateX(0); }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
-      .page-wrap {
-        grid-template-columns: 1fr;
-      }
-
+      .page-wrap { grid-template-columns: 1fr; }
       .sidebar { display: none; }
-
       .mobile-header { display: flex; }
-
-      .main {
-        padding: 24px 18px 50px;
-      }
-
-      .pub-card-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .pub-img {
-        width: 100%;
-        max-width: 200px;
-      }
-
-      .news-item {
-        grid-template-columns: 1fr;
-        gap: 2px;
-      }
+      .main { padding: 24px 20px 50px; }
+      .pub-card-inner { grid-template-columns: 1fr; }
+      .pub-img { width: 100%; max-width: 200px; }
+      .news-item { grid-template-columns: 1fr; gap: 2px; }
+      .page-title { font-size: 26px; }
     }
   </style>
 </head>
@@ -680,7 +716,6 @@
     </button>
   </div>
 
-  <!-- MOBILE OVERLAY + DRAWER -->
   <div class="mobile-overlay" id="mobileOverlay" onclick="toggleDrawer()"></div>
   <div class="mobile-drawer" id="mobileDrawer">
     <div style="text-align:center;margin-bottom:20px;">
@@ -708,7 +743,6 @@
   </div>
 
   <div class="page-wrap">
-    <!-- SIDEBAR (desktop) -->
     <aside class="sidebar">
       <div class="photo-frame">
         <img src="Figures/Eric_Onyame.png" alt="Portrait of Eric Onyame" />
@@ -779,13 +813,12 @@
       </div>
     </aside>
 
-    <!-- MAIN -->
+    <!-- ════════════════ MAIN ════════════════ -->
     <div class="main">
 
       <!-- ABOUT -->
       <div class="page active" id="page-about">
         <h1 class="page-title">About Me</h1>
-        <!-- <p class="page-subtitle">PhD Candidate at the University of Virginia School of Data Science</p> -->
 
         <p class="about-bio">
           I am a PhD candidate in Data Science at the University of Virginia School of Data Science, where I am fortunate to work with
@@ -803,9 +836,33 @@
           I received my bachelor's degree in Mathematics with Economics (First Class Honors) from the University of Cape Coast in Ghana.
         </p>
 
-        <!-- <p class="about-bio">
-          I am broadly interested in building AI systems that are safe, robust, and worthy of user trust — systems whose outputs are honest, harmless, helpful, and faithful to evidence across diverse users, languages, and contexts.
-        </p> -->
+        <h3 class="about-section-title">Current Research</h3>
+
+        <div class="about-current">
+          <span class="current-label">What I'm working on now</span>
+          <p>
+            I am currently studying <strong>chain-of-thought (CoT) monitorability under linguistic distribution shift</strong> — investigating how reliably we can oversee and interpret the reasoning traces of large language models when the input language or cultural context differs from training conditions. This work sits at the intersection of AI Safety and Multilingual AI, and is motivated by the need for robust monitoring tools that remain faithful across diverse deployment settings.
+          </p>
+        </div>
+
+        <h3 class="about-section-title">Recent Publication</h3>
+
+        <div class="about-pub-highlight">
+          <div class="pub-card-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
+          <div class="pub-authors"><span class="me">Eric Onyame</span>, Akash Ghosh, Subhadip Baidya, Sriparna Saha, Xiuying Chen, Chirag Agarwal.</div>
+          <div>
+            <span class="pub-venue">ACL 2026 · Main Conference · Oral</span>
+            <a class="pub-link" href="https://arxiv.org/abs/2601.13262" target="_blank" rel="noopener noreferrer">arXiv →</a>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p class="footer-quote">
+            "The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night."
+            <span class="footer-author">— Henry Wadsworth Longfellow</span>
+          </p>
+          <p>© <script>document.write(new Date().getFullYear())</script> Eric Onyame. All rights reserved.</p>
+        </div>
       </div>
 
       <!-- NEWS -->
@@ -841,6 +898,14 @@
           <div class="news-date">Apr 2022</div>
           <div class="news-text">Inducted into Pi Mu Epsilon Mathematics Honor Society.</div>
         </div>
+
+        <div class="footer">
+          <p class="footer-quote">
+            "The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night."
+            <span class="footer-author">— Henry Wadsworth Longfellow</span>
+          </p>
+          <p>© <script>document.write(new Date().getFullYear())</script> Eric Onyame. All rights reserved.</p>
+        </div>
       </div>
 
       <!-- RESEARCH -->
@@ -851,7 +916,7 @@
           I am motivated by a central question: how can we design AI models whose outputs are honest, harmless, helpful,
           and faithful to evidence across diverse users, languages, and contexts?</p>
 
-        <p class="section-note" style="margin-top:10px;">
+        <p class="section-note">
           Recently, I have been especially interested in three directions:
         </p>
 
@@ -1003,14 +1068,6 @@
         </div>
       </div>
 
-      <!-- FOOTER (shown on every page) -->
-      <div class="footer">
-        <p class="footer-quote">
-          "The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upward in the night."
-          <span class="footer-author">— Henry Wadsworth Longfellow</span>
-        </p>
-        <p>© <script>document.write(new Date().getFullYear())</script> Eric Onyame. All rights reserved.</p>
-      </div>
     </div>
   </div>
 
@@ -1018,12 +1075,9 @@
     function go(page) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById('page-' + page).classList.add('active');
-
       document.querySelectorAll('.sidebar-nav a, #mobileNav a').forEach(a => {
         a.classList.toggle('active', a.dataset.page === page);
       });
-
-      // scroll main to top
       document.querySelector('.main').scrollTop = 0;
       window.scrollTo(0, 0);
     }
@@ -1035,28 +1089,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
